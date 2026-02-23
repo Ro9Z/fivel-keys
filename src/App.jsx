@@ -42,7 +42,7 @@ const LINKS = {
 };
 
 // ✅ ВКЛЮЧАЕМ LIVE ДАННЫЕ С ФАЙЛА public/status.json
-const LIVE_DATA_ENDPOINT = `${import.meta.env.BASE_URL}status.json`;
+const LIVE_DATA_ENDPOINT = "https://gist.githubusercontent.com/Ro9Z/f3f74cc722b49fbf2d3ff553290f958d/raw/de76eaf953aadcba534745f6e2c81bb381d42d06/status.json";
 
 // значения по умолчанию (если live временно не читается)
 const FALLBACK = {
@@ -366,7 +366,7 @@ export default function App() {
     async function load() {
       if (!LIVE_DATA_ENDPOINT) return;
       try {
-        const res = await fetch(LIVE_DATA_ENDPOINT, { cache: "no-store" });
+        const res = await fetch(`${LIVE_DATA_ENDPOINT}?t=${Date.now()}`, { cache: "no-store" });
         if (!res.ok) throw new Error("bad status");
         const json = await res.json();
         if (!cancelled) {
