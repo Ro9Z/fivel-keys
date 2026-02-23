@@ -1,0 +1,10 @@
+{
+  "buy_price": 140,
+  "sell_price": 150,
+  "keys_for_sale": 30,
+  "keys_want_buy": 100,
+  "reserved_for_sale": 0,
+  "reserved_for_buy": 0,
+  "currency": "₽",
+  "updated_ts": 1771844935
+}
