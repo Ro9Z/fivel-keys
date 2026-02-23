@@ -42,7 +42,7 @@ const LINKS = {
 };
 
 // ✅ ВКЛЮЧАЕМ LIVE ДАННЫЕ С ФАЙЛА public/status.json
-const LIVE_DATA_ENDPOINT = "/status.json";
+const LIVE_DATA_ENDPOINT = `${import.meta.env.BASE_URL}status.json`;
 
 // значения по умолчанию (если live временно не читается)
 const FALLBACK = {
